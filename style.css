@@ -1,0 +1,151 @@
+:root {
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+header {
+  height: 60px;
+  width: 100%;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-box {
+  background-color: var(--primary-color);
+  width: 250px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  align-items: center;
+}
+
+.search-box img {
+  width: 40px;
+  height: 20px;
+  padding-left: 15px;
+}
+
+.search-box .search {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 50px;
+}
+
+.search:focus {
+  outline: none;
+}
+.search::placeholder {
+  color: #fff;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.movie-box {
+  background-color: var(--secondary-color);
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.movie-box img {
+  width: 210px;
+  height: 200px;
+  border-radius: 10px 10px 0px 0px;
+}
+.info-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movie-box .info-box h3 {
+  color: #fff;
+  margin: 10px;
+  font-size: 12px;
+}
+
+span {
+  background-color: var(--primary-color);
+  padding: 2px 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.overview {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  position: absolute;
+  bottom: 0px;
+  margin: 5px;
+  transition: transform 0.2s ease;
+  transform: translateY(104%);
+}
+
+.overview h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.overview p {
+  font-size: 12px;
+}
+
+.movie-box:hover .overview {
+  transform: translateY(0%);
+}
+.green {
+  color: lightgreen;
+}
+
+
+.orange {
+  color: orange;
+}
+
+.red {
+  color: red;
+}
+
+.loading-container {
+  width:  100vw;
+  height:  100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading-container img {
+  width: 100px;
+  height: 100px;
+  filter: brightness(20);
+  transform: translate(-50%, -50%);
+}
